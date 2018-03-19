@@ -1,0 +1,34 @@
+.trips-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+.trip {
+    width: 450px;
+    height: 450px;
+    background-size: cover;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.trip:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 0 10px #70c041;
+    /* transform: scale(1.07); */
+}
+
+.trip:last-of-type {
+    margin-right: 0;
+}
+
+.trip:only-of-type {
+    margin: 0;
+}
+
+.trip .title {
+    color: white;
+    font-size: 30px;
+    padding: 2em;
+}
