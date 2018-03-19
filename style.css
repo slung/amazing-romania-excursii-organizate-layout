@@ -1,22 +1,33 @@
 .trips-container {
+    font-family: 'Poppins', sans-serif;
+    color: white;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 1000px;
+    flex-wrap: wrap;
+    /* width: 1000px; */
 }
 
 .trip {
-    width: 450px;
-    height: 450px;
+    flex: 1 0 500px;
+    box-sizing: border-box;
+    margin: 1rem .25em;
+    /* max-width: 450px;
+    height: 450px; */
     background-size: cover;
     margin-bottom: 1em;
     margin-right: 1em;
+    padding: 1em;
 }
 
 .trip:hover {
     cursor: pointer;
     box-shadow: inset 0 0 0 10px #70c041;
     /* transform: scale(1.07); */
+}
+
+@media screen and (min-width: 60em) {
+    .trip {
+        max-width: calc(50% - 1em);
+    }
 }
 
 .trip:last-of-type {
@@ -28,7 +39,26 @@
 }
 
 .trip .title {
-    color: white;
-    font-size: 30px;
-    padding: 2em;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.trip .button {
+    background-color: #70c041;
+    border-radius: 50px 50px 50px 50px;
+    text-decoration: none;
+    border-style: solid;
+    border-color: #70c041;
+}
+
+.trip .button:hover {
+    background-color: rgba(97,206,112,0.37);
+    border-color: #70c041;
+}
+
+.trip .button .text {
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 0.7px;
 }
